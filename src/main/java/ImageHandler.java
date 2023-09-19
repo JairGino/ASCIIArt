@@ -28,8 +28,12 @@ public abstract class ImageHandler {
         return false;
     }
 
+    public Boolean checkImageLoaded() {
+        return (this.image == null) ? false : true;
+    }
+
     public void viewImageProperties() {
-        System.out.println(this.image);
+//        System.out.println(this.image);
 
         System.out.printf("\nProperties: ");
         System.out.printf("\n\tProperty names recognized: %s", this.image.getPropertyNames());

@@ -8,6 +8,7 @@ public class ImageConverter extends ImageHandler {
     private int height;         //Original Image Height
 
     private String asciiChars = " .:-=+*#%@";
+//    private String asciiChars = " _.,-=+:;abc!?0123456789$W#@Ñ";
     private int asciiWidth;    //AscII Image Width
     private int asciiHeight;   //AscII Image Height
     private Boolean addBorderToImage = true;
@@ -132,6 +133,7 @@ public class ImageConverter extends ImageHandler {
 
         // Get the color of the pixel (TYPE_INT_ARGB)
         int rgb = super.image.getRGB(pixelX, pixelY);
+
         int grayscale = calculateGrayscale(rgb);
 
         // Map the grayscale value to an ASCII character
